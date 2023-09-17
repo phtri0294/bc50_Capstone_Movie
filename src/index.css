@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.logo {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+    padding: 20px;
+}
+
+/* Override the default behavior of the collapse class */
+/*================= Collapse =================*/
+.collapse {
+    display: none !important;
+    visibility: visible !important;
+    height: 0 !important;
+    transition: height 0.15s ease-in-out, visibility 0.15s ease-in-out;
+}
+
+.collapse.show {
+    display: block !important;
+    visibility: visible !important;
+    transition: height 0.15s ease-in-out, visibility 0.15s ease-in-out;
+    height: auto !important;
+}
+
+.collapsible {
+    overflow: hidden !important;
+    max-height: 0 !important;
+}
+
+/*================= Collapse =================*/
+.custom-dashboard {
+    @apply text-center text-gray-400 hover:text-green-200 transition-all;
+}
+
+.gradient-custom {
+    background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+}
+
+.h-divider {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    height: 1px;
+    width: 100%;
+    border-top: 1px solid gray;
+}
+
+.heading-page {
+    @apply flex justify-center text-2xl mb-3 font-medium;
+}
+
+.button-add-new{
+    @apply  rounded-lg px-4 py-2  bg-green-500  hover:bg-green-700 transition-all;
+}
+
+.field-input-edit{
+    @apply border-2 rounded-md px-2 border-cyan-200;
+}
+
+.button-submit-edit{
+    @apply rounded-md bg-yellow-500 text-white p-2 hover:bg-yellow-600 transition-all;
+}
+
+.button-submit-addnew{
+    @apply rounded-md bg-green-500 text-white p-2 hover:bg-green-600 transition-all;
+}
+
+.button-submit-setnew{
+    @apply rounded-md bg-cyan-500 text-white p-2 hover:bg-cyan-600 transition-all;
+}
+
+.error-message {
+    @apply text-red-500 text-sm;
+}
